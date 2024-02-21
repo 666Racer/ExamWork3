@@ -71,23 +71,17 @@ public class View {
                     break;
                 }
                 case "2": {
-                    System.out.println(listAnimals);
-                    String result = choosingAnimal();
-                    boolean flagIn = result.equals("7");
-                    if(flagIn) break;
-                    else {
-                        controller.printAll();
-                    }
-
+                    controller.printAll();
                     break;
                 }
+
                 case "3": {
                     System.out.println(listAnimals);
                     String result = choosingAnimal();
                     boolean flagIn = result.equals("7");
                     if(flagIn) break;
                     else {
-                        controller.addAnimals(result, inputName(),inputDateOfBirth(), inputNewCommands());
+                        controller.printCommands();
                     }
                     break;
                 }
@@ -97,16 +91,15 @@ public class View {
                     boolean flagIn = result.equals("7");
                     if(flagIn) break;
                     else {
-                        controller.addAnimals(result, inputName(),inputDateOfBirth(), inputNewCommands());
+                        controller.addNewCommand;
                     }
                     break;
                 }
 
-                case "5":{
+                case "5": {
                     flag = false;
                     break;
                 }
-            }
         }
     }
 }

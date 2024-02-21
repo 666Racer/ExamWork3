@@ -59,7 +59,7 @@ public class Controller {
     public void addCommand (String type, String name, String dateOfBirth, HashSet<String> commands){
         switch (type) {
             case "1": {
-                pets.addCommand();
+                pets.addCommand(Do);
                 break;
             }
             case "2": {
