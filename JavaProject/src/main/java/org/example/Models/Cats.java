@@ -34,9 +34,6 @@ public class Cats extends Pets{
     }
 
 //Methods
-    public void addCommand(String command){
-        this.commands.add(command);
-    }
 
     public void printAllCommands(){
         for (String com:this.commands) {

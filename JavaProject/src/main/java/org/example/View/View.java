@@ -1,6 +1,8 @@
 package org.example.View;
 
 import org.example.Controller.Controller;
+import org.example.Models.Animals;
+import org.example.Models.Pets;
 
 import java.util.Scanner;
 
@@ -9,35 +11,35 @@ public class View {
     private final Scanner scanner = new Scanner(System.in);
     private final Controller controller = new Controller();
 
-//Constructor
+    //Constructor
     public View() {
     }
 
-//Requests
-    private String inputName(){
+    //Requests
+    private String inputName() {
         System.out.println("Enter the name of animal");
         return scanner.nextLine();
     }
 
-    private String inputDateOfBirth(){
+    private String inputDateOfBirth() {
         System.out.println("Enter birthday of the animal");
         return scanner.nextLine();
     }
 
 
-    private String inputNewCommands(){
+    private String inputNewCommands() {
         System.out.println("Enter a new command for the animal");
         return scanner.nextLine();
     }
 
-    private String choosingAnimal(){
+    private String chooseType() {
         System.out.println("Choose the type of animal:\n");
         System.out.print("Your choice -> ");
         return scanner.nextLine();
     }
 
- //Menu
-    public void start(){
+    //Menu
+    public void start() {
         boolean flag = true;
         String menu = "\n       ---Menu---\n\n" +
                 "1 -> Add animal\n" +
@@ -59,14 +61,14 @@ public class View {
         while (flag) {
             System.out.print(menu);
             String input = scanner.nextLine();
-            switch (input){
-                case "1":{
+            switch (input) {
+                case "1": {
                     System.out.println(listAnimals);
-                    String result = choosingAnimal();
+                    String result = chooseType();
                     boolean flagIn = result.equals("7");
-                    if(flagIn) break;
+                    if (flagIn) break;
                     else {
-                        controller.addAnimals(result, inputName(),inputDateOfBirth(), inputNewCommands());
+                        controller.addAnimals(result, inputName(), inputDateOfBirth(), inputNewCommands());
                     }
                     break;
                 }
@@ -77,9 +79,9 @@ public class View {
 
                 case "3": {
                     System.out.println(listAnimals);
-                    String result = choosingAnimal();
+                    String result = chooseType();
                     boolean flagIn = result.equals("7");
-                    if(flagIn) break;
+                    if (flagIn) break;
                     else {
                         controller.printCommands();
                     }
@@ -87,11 +89,11 @@ public class View {
                 }
                 case "4": {
                     System.out.println(listAnimals);
-                    String result = choosingAnimal();
+                    String result = chooseType();
                     boolean flagIn = result.equals("7");
-                    if(flagIn) break;
+                    if (flagIn) break;
                     else {
-                        controller.addNewCommand;
+                        Animals.addNewCommand(result, inputName(), inputDateOfBirth(), inputNewCommands());
                     }
                     break;
                 }
@@ -100,6 +102,7 @@ public class View {
                     flag = false;
                     break;
                 }
+            }
         }
     }
 }

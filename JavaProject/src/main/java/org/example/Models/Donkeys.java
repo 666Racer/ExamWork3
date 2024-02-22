@@ -7,7 +7,7 @@ public class Donkeys extends PackAnimals{
     private final String type = "Donkey";
     private String name;
     private String dateOfBirth;
-    private final HashSet<String> commands = new HashSet<>();
+    private static HashSet<String> commands = new HashSet<>();
 
 
 //Constructor
@@ -17,7 +17,7 @@ public class Donkeys extends PackAnimals{
 
     }
 
-        //Getters & Setters
+//Getters & Setters
     public String getName() {
         return name;
     }
@@ -34,14 +34,7 @@ public class Donkeys extends PackAnimals{
         this.dateOfBirth = dateOfBirth;
     }
 
-    public HashSet<String> getCommands() {
-        return commands;
-    }
-
 //Methods
-    public void addCommand(String command){
-        this.commands.add(command);
-    }
 
     public void printAllCommands(){
         for (String com:this.commands) {

@@ -11,9 +11,7 @@ public class Dogs extends Pets{
 
 //Constructor
     public Dogs(String name, String dateOfBirth, HashSet<String> commands) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.commands = commands;
+        super();
     }
 
 //Getters & Setters

@@ -6,32 +6,34 @@ import java.util.HashSet;
 public class Pets extends Animals{
 
     //
-    private final ArrayList<Pets> listAnimals = new ArrayList<>();
+    private final ArrayList<Pets> listPets = new ArrayList<>();
 
 //Getters & Setters
 
-    public ArrayList<Pets> getListAnimals() {
-        return listAnimals;
+    public ArrayList<Pets> getListPets() {
+        return listPets;
     }
 
 //Constructor
 
     public Pets() {
+        super();
     }
 
 //Methods
     //Adding
     public void addNewPet(Pets animal) {
-        listAnimals.add(animal);
+        listPets.add(animal);
     }
 
-    public void addCommand(String command){
-        HashSet<String> h = new HashSet<String>();;
-        h.add(command);
+    //ShowCommands
+    public void printPetCommands(Pets animal){
+        System.out.println(animal.getCommands());
     }
+
     //ShowAll
     public void printAll(){
-        for (Pets var : this.listAnimals) {
+        for (Pets var : this.listPets) {
             System.out.println(var.toString());
         }
     }
