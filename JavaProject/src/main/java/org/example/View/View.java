@@ -1,9 +1,6 @@
 package org.example.View;
 
 import org.example.Controller.Controller;
-import org.example.Models.Animals;
-import org.example.Models.Pets;
-
 import java.util.Scanner;
 
 public class View {
@@ -68,7 +65,11 @@ public class View {
                     boolean flagIn = result.equals("7");
                     if (flagIn) break;
                     else {
-                        controller.addAnimals(result, inputName(), inputDateOfBirth(), inputNewCommands());
+                        try {
+                            controller.addAnimals(result, inputName(), inputDateOfBirth(), inputNewCommands());
+                        } catch (Exception e) {
+                            System.out.println("\nFields can't be empty!\n");
+                        }
                     }
                     break;
                 }
@@ -83,7 +84,7 @@ public class View {
                     boolean flagIn = result.equals("7");
                     if (flagIn) break;
                     else {
-                        controller.printCommands();
+                        controller.printCommands(result, inputName());
                     }
                     break;
                 }
@@ -93,7 +94,7 @@ public class View {
                     boolean flagIn = result.equals("7");
                     if (flagIn) break;
                     else {
-                        Animals.addNewCommand(result, inputName(), inputDateOfBirth(), inputNewCommands());
+                        controller.addNewCommand(result, inputName(), inputNewCommands());
                     }
                     break;
                 }

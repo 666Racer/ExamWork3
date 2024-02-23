@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class PackAnimals extends Animals{
 
-//
+//List of Pack Animals
     private final ArrayList<PackAnimals> listPackAnimals = new ArrayList<>();
 
-//Getters & Setters
+//Getters
 
     public ArrayList<PackAnimals> getListPackAnimals() {
         return listPackAnimals;
@@ -16,7 +16,7 @@ public class PackAnimals extends Animals{
 //Constructor
 
     public PackAnimals() {
-        super();
+        super(Animals.getName(),Animals.getDateOfBirth(),Animals.getCommands());
     }
 
 
@@ -24,11 +24,6 @@ public class PackAnimals extends Animals{
     //Adding
     public void addNewPackAnimal(PackAnimals animal) {
         listPackAnimals.add(animal);
-    }
-
-    //ShowCommands
-    public void printPackAnimalCommands(PackAnimals animal){
-        System.out.println(animal.getCommands());
     }
 
     //ShowAll

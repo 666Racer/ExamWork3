@@ -14,33 +14,18 @@ public class Donkeys extends PackAnimals{
     public Donkeys(String name, String dateOfBirth, HashSet<String> commands) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
-
     }
 
-//Getters & Setters
+//Getters
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
 //Methods
-
-    public void printAllCommands(){
-        for (String com:this.commands) {
-            System.out.print(com +' ');
-        }
-    }
 
     @Override
     public String toString() {

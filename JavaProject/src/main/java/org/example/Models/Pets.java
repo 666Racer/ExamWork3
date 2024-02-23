@@ -5,10 +5,10 @@ import java.util.HashSet;
 
 public class Pets extends Animals{
 
-    //
+//List of Pets
     private final ArrayList<Pets> listPets = new ArrayList<>();
 
-//Getters & Setters
+//Getters
 
     public ArrayList<Pets> getListPets() {
         return listPets;
@@ -17,18 +17,13 @@ public class Pets extends Animals{
 //Constructor
 
     public Pets() {
-        super();
+        super(Animals.getName(),Animals.getDateOfBirth(),Animals.getCommands());
     }
 
 //Methods
     //Adding
     public void addNewPet(Pets animal) {
         listPets.add(animal);
-    }
-
-    //ShowCommands
-    public void printPetCommands(Pets animal){
-        System.out.println(animal.getCommands());
     }
 
     //ShowAll

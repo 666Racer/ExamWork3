@@ -5,10 +5,10 @@ import java.util.HashSet;
 
 public abstract class Animals {
 
-    private String name;
-    private String dateOfBirth;
-    private HashSet<String> commands = new HashSet<>();
-    private Animals(String name, String dateOfBirth, String commands) {
+    protected String name;
+    protected String dateOfBirth;
+    protected HashSet<String> commands = new HashSet<>();
+    public Animals(String name, String dateOfBirth, String commands) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.commands = new HashSet<String>();
@@ -23,32 +23,29 @@ public abstract class Animals {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDateOfBirth() {
         return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public HashSet<String> getCommands() {
         return commands;
     }
 
-    /*public void setCommands(HashSet<String> commands) {
-        this.commands = commands;
-    }*/
 
     public void addNewCommand(String command){
         this.commands.add(command);
     }
 
-    public void printAnimalCommands(Animals animal){
-        System.out.println(animal.getCommands());
+    public void printAnimalCommands(){
+        if(!this.commands.isEmpty()){
+            System.out.print("\n Commands of this animal: ");
+            for (String com:this.commands) {
+                System.out.print(com +' ');
+            }
+            System.out.println();
+        }else{
+            System.out.println("\nNo commands!\n");
+        }
     }
 
     private final ArrayList<Animals> listAllAnimals = new ArrayList<>();
