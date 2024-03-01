@@ -5,9 +5,10 @@ import java.util.HashSet;
 
 public abstract class Animals {
 
-    protected String name;
-    protected String dateOfBirth;
-    protected HashSet<String> commands = new HashSet<>();
+    String name;
+    String dateOfBirth;
+    HashSet<String> commands = new HashSet<>();
+
     public Animals(String name, String dateOfBirth, String commands) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -17,6 +18,12 @@ public abstract class Animals {
                 commandsParse) {
             this.commands.add(command.trim().toLowerCase());
         }
+    }
+
+    public Animals(String name, String dateOfBirth, HashSet<String> commands) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.commands = commands;
     }
 
     public String getName() {
@@ -32,18 +39,18 @@ public abstract class Animals {
     }
 
 
-    public void addNewCommand(String command){
+    public void addNewCommand(String command) {
         this.commands.add(command);
     }
 
-    public void printAnimalCommands(){
-        if(!this.commands.isEmpty()){
+    public void printAnimalCommands() {
+        if (!this.commands.isEmpty()) {
             System.out.print("\n Commands of this animal: ");
-            for (String com:this.commands) {
-                System.out.print(com +' ');
+            for (String com : this.commands) {
+                System.out.print(com + ' ');
             }
             System.out.println();
-        }else{
+        } else {
             System.out.println("\nNo commands!\n");
         }
     }
@@ -52,5 +59,14 @@ public abstract class Animals {
 
     public ArrayList<Animals> getListAllAnimals() {
         return listAllAnimals;
+    }
+
+
+    public String toString() {
+        return "----" + /*type +*/ "-----" + '\n' +
+                "Name:" + ' ' + name + '\n' +
+                "Date of birth:" + ' ' + dateOfBirth + '\n' +
+                "Commands:" + ' ' + commands + '\n';
+
     }
 }

@@ -2,29 +2,29 @@ package org.example.Models;
 
 import java.util.HashSet;
 
-public class Cats extends Pets{
+public class Cats extends Animals {
 
-//Fields
+    //Fields
     private final String type = "Cat";
-    private String name;
+    /*private String name;
     private String dateOfBirth;
-    private HashSet<String> commands = new HashSet<>();
+    private HashSet<String> commands = new HashSet<>();*/
 
-//Constructor
-    public Cats(String name, String dateOfBirth, HashSet<String> commands) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
+    //Constructor
+    public Cats(String name, String dateOfBirthday, HashSet<String> commands) {
+        super(name, dateOfBirthday, commands);
     }
 
+
 //Getters
-    public String getName() {
+    /*public String getName() {
         return name;
     }
 
     public String getDateOfBirth() {
         return dateOfBirth;
     }
-
+*/
 
 //Methods
 
@@ -32,6 +32,7 @@ public class Cats extends Pets{
     public String toString() {
         return   "----" + type + "-----" +'\n' +
                 "Name:"+ ' ' + name +'\n' +
-                "Date of birth:"+ ' ' + dateOfBirth + '\n';
+                "Date of birth:"+ ' ' + dateOfBirth + '\n'+
+                "Commands:" + ' ' + commands + '\n';
     }
 }
