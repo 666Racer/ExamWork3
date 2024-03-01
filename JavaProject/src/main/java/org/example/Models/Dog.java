@@ -2,15 +2,15 @@ package org.example.Models;
 
 import java.util.HashSet;
 
-public class Hamsters extends Animals {
+public class Dog extends Animal {
     //Fields
-    private final String type = "Hamster";
+    private final String type = "Dog";
     /*private String name;
     private String dateOfBirth;
-    private final HashSet<String> commands = new HashSet<>();*/
+    private HashSet<String> commands = new HashSet<>();*/
 
     //Constructor
-    public Hamsters(String name, String dateOfBirthday, HashSet<String> commands) {
+    public Dog(String name, String dateOfBirthday, HashSet<String> commands) {
         super(name, dateOfBirthday, commands);
     }
 

@@ -32,7 +32,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    pets.addNewAnimal(new Dogs(name, dateOfBirth, commandsList));
+                    pets.addNewAnimal(new Dog(name, dateOfBirth, commandsList));
                     break;
                 }
                 case "2": {
@@ -42,7 +42,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    pets.addNewAnimal(new Cats(name, dateOfBirth, commandsList));
+                    pets.addNewAnimal(new Cat(name, dateOfBirth, commandsList));
                     break;
                 }
                 case "3": {
@@ -52,7 +52,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    pets.addNewAnimal(new Hamsters(name, dateOfBirth, commandsList));
+                    pets.addNewAnimal(new Hamster(name, dateOfBirth, commandsList));
                     break;
                 }
                 case "4": {
@@ -62,7 +62,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    packAnimals.addNewAnimal(new Horses(name, dateOfBirth, commandsList));
+                    packAnimals.addNewAnimal(new Horse(name, dateOfBirth, commandsList));
                     break;
                 }
                 case "5": {
@@ -72,7 +72,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    packAnimals.addNewAnimal(new Camels(name, dateOfBirth, commandsList));
+                    packAnimals.addNewAnimal(new Camel(name, dateOfBirth, commandsList));
                     break;
                 }
                 case "6": {
@@ -82,7 +82,7 @@ public class Controller {
                             commandsParse) {
                         commandsList.add(command.trim().toLowerCase());
                     }
-                    packAnimals.addNewAnimal(new Donkeys(name, dateOfBirth, commandsList));
+                    packAnimals.addNewAnimal(new Donkey(name, dateOfBirth, commandsList));
                     break;
                 }
                 default: {
@@ -95,7 +95,7 @@ public class Controller {
         }
     }
 
-    //print all Animals
+    //print all Animal
     public void printAll(){
         System.out.println("Pets: ");
         pets.printAll();
@@ -114,9 +114,9 @@ public class Controller {
         switch (type) {
             case "1": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Dogs && animal.toString().contains(name)) {
-                        Dogs dog = (Dogs) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Dog && animal.toString().contains(name)) {
+                        Dog dog = (Dog) animal;
                         dog.printAnimalCommands();
                         flag = true;
                     }
@@ -128,9 +128,9 @@ public class Controller {
             }
             case "2": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Cats && animal.toString().contains(name)) {
-                        Cats cat = (Cats) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Cat && animal.toString().contains(name)) {
+                        Cat cat = (Cat) animal;
                         cat.printAnimalCommands();
                         flag = true;
                     }
@@ -142,9 +142,9 @@ public class Controller {
             }
             case "3": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Hamsters && animal.toString().contains(name)) {
-                        Hamsters hamsters = (Hamsters) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Hamster && animal.toString().contains(name)) {
+                        Hamster hamsters = (Hamster) animal;
                         hamsters.printAnimalCommands();
                         flag = true;
                     }
@@ -156,9 +156,9 @@ public class Controller {
             }
             case "4": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Horses && animal.toString().contains(name)) {
-                        Horses horse = (Horses) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Horse && animal.toString().contains(name)) {
+                        Horse horse = (Horse) animal;
                         horse.printAnimalCommands();
                         flag = true;
                     }
@@ -170,9 +170,9 @@ public class Controller {
             }
             case "5": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Camels && animal.toString().contains(name)) {
-                        Camels camels = (Camels) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Camel && animal.toString().contains(name)) {
+                        Camel camels = (Camel) animal;
                         camels.printAnimalCommands();
                         flag = true;
                     }
@@ -184,9 +184,9 @@ public class Controller {
             }
             case "6": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Donkeys && animal.toString().contains(name)) {
-                        Donkeys donkeys = (Donkeys) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Donkey && animal.toString().contains(name)) {
+                        Donkey donkeys = (Donkey) animal;
                         donkeys.printAnimalCommands();
                         flag = true;
                     }
@@ -215,9 +215,9 @@ public class Controller {
         switch (type) {
             case "1": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Dogs && animal.toString().contains(name)) {
-                        Dogs dog = (Dogs) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Dog && animal.toString().contains(name)) {
+                        Dog dog = (Dog) animal;
                         dog.addNewCommand(newCommand);
                         flag = true;
                     }
@@ -229,9 +229,9 @@ public class Controller {
             }
             case "2": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Cats && animal.toString().contains(name)) {
-                        Cats cat = (Cats) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Cat && animal.toString().contains(name)) {
+                        Cat cat = (Cat) animal;
                         cat.addNewCommand(newCommand);
                         flag = true;
                     }
@@ -243,9 +243,9 @@ public class Controller {
             }
             case "3": {
                 boolean flag = false;
-                for (Animals animal : pets.getListAnimals()) {
-                    if (animal instanceof Hamsters && animal.toString().contains(name)) {
-                        Hamsters hamsters = (Hamsters) animal;
+                for (Animal animal : pets.getListAnimals()) {
+                    if (animal instanceof Hamster && animal.toString().contains(name)) {
+                        Hamster hamsters = (Hamster) animal;
                         hamsters.addNewCommand(newCommand);
                         flag = true;
                     }
@@ -257,9 +257,9 @@ public class Controller {
             }
             case "4": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Horses && animal.toString().contains(name)) {
-                        Horses horse = (Horses) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Horse && animal.toString().contains(name)) {
+                        Horse horse = (Horse) animal;
                         horse.addNewCommand(newCommand);
                         flag = true;
                     }
@@ -271,9 +271,9 @@ public class Controller {
             }
             case "5": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Camels && animal.toString().contains(name)) {
-                        Camels camels = (Camels) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Camel && animal.toString().contains(name)) {
+                        Camel camels = (Camel) animal;
                         camels.addNewCommand(newCommand);
                         flag = true;
                     }
@@ -285,9 +285,9 @@ public class Controller {
             }
             case "6": {
                 boolean flag = false;
-                for (Animals animal : packAnimals.getListAnimals()) {
-                    if (animal instanceof Donkeys && animal.toString().contains(name)) {
-                        Donkeys donkeys = (Donkeys) animal;
+                for (Animal animal : packAnimals.getListAnimals()) {
+                    if (animal instanceof Donkey && animal.toString().contains(name)) {
+                        Donkey donkeys = (Donkey) animal;
                         donkeys.addNewCommand(newCommand);
                         flag = true;
                     }

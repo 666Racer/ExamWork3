@@ -44,7 +44,7 @@ public class View {
                 "3 -> Show commands of animals\n" +
                 "4 -> Teach new command\n" +
                 "5 -> Exit\n\n" +
-                "Ваш выбор -> ";
+                "Your choice -> ";
 
         String listAnimals = "\n---Types of the animals---\n\n" +
                 "1 -> Dog\n" +

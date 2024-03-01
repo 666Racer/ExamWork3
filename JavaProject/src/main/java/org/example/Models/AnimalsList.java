@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class AnimalsList {
     String name;
-    private final ArrayList<Animals> listAnimals = new ArrayList<>();
-    public ArrayList<Animals> getListAnimals() {
+    private final ArrayList<Animal> listAnimals = new ArrayList<>();
+    public ArrayList<Animal> getListAnimals() {
         return listAnimals;
     }
 
@@ -17,13 +17,13 @@ public class AnimalsList {
 
     //Methods
     //Adding
-    public void addNewAnimal(Animals animal) {
+    public void addNewAnimal(Animal animal) {
         listAnimals.add(animal);
     }
 
     //ShowAll
     public void printAll(){
-        for (Animals var : this.listAnimals) {
+        for (Animal var : this.listAnimals) {
             System.out.println(var.toString());
         }
     }

@@ -3,13 +3,13 @@ package org.example.Models;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public abstract class Animals {
+public abstract class Animal {
 
     String name;
     String dateOfBirth;
     HashSet<String> commands = new HashSet<>();
 
-    public Animals(String name, String dateOfBirth, String commands) {
+    public Animal(String name, String dateOfBirth, String commands) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.commands = new HashSet<String>();
@@ -20,7 +20,7 @@ public abstract class Animals {
         }
     }
 
-    public Animals(String name, String dateOfBirth, HashSet<String> commands) {
+    public Animal(String name, String dateOfBirth, HashSet<String> commands) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.commands = commands;
@@ -55,9 +55,9 @@ public abstract class Animals {
         }
     }
 
-    private final ArrayList<Animals> listAllAnimals = new ArrayList<>();
+    private final ArrayList<Animal> listAllAnimals = new ArrayList<>();
 
-    public ArrayList<Animals> getListAllAnimals() {
+    public ArrayList<Animal> getListAllAnimals() {
         return listAllAnimals;
     }
 
